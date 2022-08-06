@@ -2,6 +2,7 @@ package com.example.crud_gv.Service.Implement;
 
 import com.example.crud_gv.Mapper.TeacherMapper;
 import com.example.crud_gv.Model.Dto.TeacherDto;
+import com.example.crud_gv.Model.Entity.Student;
 import com.example.crud_gv.Model.Entity.Teacher;
 import com.example.crud_gv.Model.In.TeacherIn;
 import com.example.crud_gv.Model.Response;
@@ -45,9 +46,7 @@ public class TeacherServiceImplement implements TeacherService {
         Optional<Teacher> teacher = teacherRepository.findById(id);
         Teacher teacher1 = teacher.get();
         System.out.println("giao vien: "+ teacher1);
-        teacher1.setName(teacherIn.getName());
-        teacher1.setPhone(teacherIn.getPhone());
-        teacher1.setAddress(teacherIn.getAddress());
+        teacher1.setNameTeacher(teacherIn.getNameTeacher());
         teacherRepository.save(teacher1);
         return new Response(true, "Update success!", null);
     }

@@ -10,7 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("/api")
+@CrossOrigin
+@RequestMapping("/teacher")
 
 public class TeacherController {
     @Autowired
@@ -21,6 +22,7 @@ public class TeacherController {
     }
     @PostMapping("")
     public ResponseEntity<?> create(@RequestBody TeacherIn teacherIn){
+        System.out.println("teacherIn: "+ teacherIn);
         return new ResponseEntity<>(teacherService.create(teacherIn), HttpStatus.OK);
     }
     @DeleteMapping("/delete/{id}")

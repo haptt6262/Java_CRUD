@@ -1,5 +1,6 @@
 package com.example.crud_gv.Model.In;
 
+import com.example.crud_gv.Model.Entity.Teacher;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class TeacherIn {
+
+public class StudentIn {
     private Integer id;
-    private String nameTeacher;
+    private String nameStudent;
+    private String email;
+    private Integer id_teacher;
 }

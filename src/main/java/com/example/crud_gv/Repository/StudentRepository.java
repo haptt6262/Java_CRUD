@@ -1,10 +1,12 @@
 package com.example.crud_gv.Repository;
 
-import com.example.crud_gv.Model.Entity.Teacher;
+import com.example.crud_gv.Model.Entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
-public interface TeacherRepository extends JpaRepository<Teacher, Integer> {
-    Teacher getById(Integer Id);
+public interface StudentRepository extends JpaRepository<Student, Integer> {
+
 }
